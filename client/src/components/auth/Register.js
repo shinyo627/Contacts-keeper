@@ -82,6 +82,7 @@ const Register = () => {
             value={password2}
             onChange={onChange}
             required
+            minLength='6'
           />
         </div>
         <input
