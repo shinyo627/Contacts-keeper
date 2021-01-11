@@ -6,11 +6,11 @@ const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);
   const { current, deleteContact, setCurrent, clearCurrent } = contactContext;
 
-  const { id, name, email, phone, type } = contact;
+  const { _id, name, email, phone, type } = contact;
 
   const onDelete = () => {
     // Using id originates from mongoDB field for each documents of contact
-    deleteContact(id);
+    deleteContact(_id);
     clearCurrent();
   };
   return (
